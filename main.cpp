@@ -6,8 +6,6 @@ using namespace std;
 
 int main(void)
 {
-    // Initialization
-
     const int screenWidth = 800;
     const int screenHeight = 850;
     const int wStep = screenWidth / cols;
@@ -15,15 +13,11 @@ int main(void)
     int generation = 0;
     init(pixels);
     init(copyPixels);
-
     InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
-
     SetTargetFPS(120);
 
-    // Main game loop
     while (!WindowShouldClose())
     {
-        // Update
         if (IsMouseButtonDown(0)) {
             int x = GetMouseX()/wStep;
             int y = GetMouseY()/hStep;
@@ -55,7 +49,7 @@ int main(void)
         }
 
         BeginDrawing();
-        // Draw
+        
         for (int i = 0; i < rows*cols; i++) {
             int row = i/cols;
             int col = i%cols;
@@ -67,14 +61,11 @@ int main(void)
         }
         DrawRectangle(0, 800, screenWidth, 50, GRAY);
         DrawText(format("Generation: {}", generation).data(), 10, 825, 25, GREEN);
-
         ClearBackground(RAYWHITE);
 
         EndDrawing();
 
     }
-
-    // De-Initialization
 
     CloseWindow();
 
