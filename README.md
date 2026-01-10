@@ -14,13 +14,14 @@ This program simulates cellular automata behavior in real time with an interacti
 ## Getting Started
 
 ### Prerequisites
-- C++17-compatible compiler
+- C++20-compatible compiler
 - raylib (installed and properly linked)
+- CMake 3.15 or higher (recommended)
 
 ### Building and Running
 1. Install raylib and its dependencies following the official instructions
 2. Clone this repository
-3. Compile the program using your preferred compiler or build system
+3. Compile the program using CMake or your preferred build system
 4. Run the generated executable
 
 ## About Conway’s Game of Life
